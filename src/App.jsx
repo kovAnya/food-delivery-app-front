@@ -15,7 +15,7 @@ function App() {
         <Route path="orders" element={<Orders />} />
       </Route>
 
-      <Route path="*" element={<Navigate to="/tweets" replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }

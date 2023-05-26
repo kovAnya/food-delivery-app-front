@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  padding: 20px 100px;
+  margin-bottom: 30px;
+  background: #ebd8ff;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #373737;
+}
+
+.link:hover {
+  color: #5cd3a8;
+}

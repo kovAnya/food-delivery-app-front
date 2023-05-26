@@ -1,5 +1,3 @@
-import css from "./Home.module.css";
-
 const Home = () => {
   return <></>;
 };

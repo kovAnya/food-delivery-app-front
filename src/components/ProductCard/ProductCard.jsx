@@ -1,6 +1,6 @@
 import css from "./ProductCard.module.css";
 
-export const ProductCard = ({ product, onClick }) => {
+export const ProductCard = ({ product }) => {
   return (
     <li className={css.product_card}>
       <img
@@ -11,7 +11,7 @@ export const ProductCard = ({ product, onClick }) => {
       />
       <h2 className={css.product_name}>{product.title}</h2>
       <p className={css.product_descr}>{product.description}</p>
-      <button className={css.product_btn} type="button" onClick={onClick}>
+      <button className={css.product_btn} type="button">
         add to Cart
       </button>
     </li>

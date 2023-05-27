@@ -6,7 +6,7 @@ export const ProductList = ({ products }) => {
   return (
     <ul className={css.product_list}>
       {products.map((product) => {
-        return <ProductCard key={product.id} product={product} />;
+        return <ProductCard key={product._id} product={product} />;
       })}
     </ul>
   );

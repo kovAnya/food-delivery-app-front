@@ -1,0 +1,23 @@
+.product_card {
+  padding: 20px;
+  width: 280px;
+  background-color: #eee;
+  border-radius: 6px;
+}
+
+.product_img {
+  width: 240px;
+}
+
+.product_name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product_descr {
+  font-size: 12px;
+}
+
+.product_btn {
+  color: green;
+}

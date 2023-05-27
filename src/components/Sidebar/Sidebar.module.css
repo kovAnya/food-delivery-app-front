@@ -1,0 +1,11 @@
+.sidebar {
+  width: 200px;
+}
+
+.sidebar_item {
+  font-weight: 600;
+}
+
+.sidebar_btn {
+  padding: 10px;
+}

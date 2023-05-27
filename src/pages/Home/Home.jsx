@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { ProductList } from "../../components/ProductsList/ProductList";
+import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { getProductsByStore } from "../../services/fetchApi";
+import css from "./Home.module.css";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -14,10 +16,17 @@ const Home = () => {
     getProducts();
   }, [store]);
 
+  const onSidebarClick = (e) => {
+    const currentStore = e.target.dataset.store;
+    console.log("currentStore", currentStore);
+    setStore(currentStore);
+  };
+
   return (
-    <>
+    <div className={css.container}>
+      <Sidebar onClick={onSidebarClick} />
       <ProductList products={products} />
-    </>
+    </div>
   );
 };
 export default Home;

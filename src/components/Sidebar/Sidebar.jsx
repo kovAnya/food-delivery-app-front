@@ -1,11 +1,13 @@
 import css from "./Sidebar.module.css";
 
-export const Sidebar = ({ onClick }) => {
+export const Sidebar = ({ onClick, activeBtn }) => {
   return (
     <ul className={css.sidebar}>
       <li to="/" className={css.sidebar_item}>
         <button
-          className={css.sidebar_btn}
+          className={`${css.sidebar_btn} ${
+            activeBtn === "vegan" ? css.active : ""
+          }`}
           data-store="vegan"
           onClick={onClick}
         >
@@ -14,7 +16,9 @@ export const Sidebar = ({ onClick }) => {
       </li>
       <li to="/cart" className={css.sidebar_item}>
         <button
-          className={css.sidebar_btn}
+          className={`${css.sidebar_btn} ${
+            activeBtn === "burrito" ? css.active : ""
+          }`}
           data-store="burrito"
           onClick={onClick}
         >
@@ -23,7 +27,9 @@ export const Sidebar = ({ onClick }) => {
       </li>
       <li to="/orders" className={css.sidebar_item}>
         <button
-          className={css.sidebar_btn}
+          className={`${css.sidebar_btn} ${
+            activeBtn === "sushi" ? css.active : ""
+          }`}
           data-store="sushi"
           onClick={onClick}
         >

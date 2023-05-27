@@ -18,13 +18,12 @@ const Home = () => {
 
   const onSidebarClick = (e) => {
     const currentStore = e.target.dataset.store;
-    console.log("currentStore", currentStore);
     setStore(currentStore);
   };
 
   return (
     <div className={css.container}>
-      <Sidebar onClick={onSidebarClick} />
+      <Sidebar onClick={onSidebarClick} activeBtn={store} />
       <ProductList products={products} />
     </div>
   );

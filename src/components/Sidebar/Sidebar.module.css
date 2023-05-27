@@ -1,5 +1,6 @@
 .sidebar {
   width: 200px;
+  padding: 0 20px;
 }
 
 .sidebar_item {
@@ -7,5 +8,19 @@
 }
 
 .sidebar_btn {
-  padding: 10px;
+  padding: 20px;
+  margin-bottom: 5px;
+  width: 100%;
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #373737;
+}
+
+.sidebar_btn:hover,
+.active {
+  background-color: honeydew;
+  color: #5cd3a8;
 }

@@ -6,7 +6,7 @@ import css from "./Home.module.css";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const [store, setStore] = useState("sushi");
+  const [store, setStore] = useState("vegan");
 
   useEffect(() => {
     const getProducts = async () => {

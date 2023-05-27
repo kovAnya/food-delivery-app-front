@@ -1,20 +1,28 @@
 .form {
   padding: 40px;
-  width: 400px;
+  width: 60%;
+  height: 400px;
   background: #eee;
   box-shadow: 7px 4px 14px rgba(0, 0, 0, 0.11);
   border-radius: 10px;
 }
 
+.form_wrapper {
+  display: flex;
+  column-gap: 30px;
+}
+
 .field {
   display: block;
   padding: 10px;
-  margin-bottom: 12px;
+  margin-top: 5px;
+  margin-bottom: 16px;
   background: white;
   border: 1px solid #888;
   border-radius: 10px;
   width: 100%;
   font-size: 16px;
+  outline: none;
 }
 
 .field:hover,
@@ -25,4 +33,46 @@
 .error {
   color: red;
   font-size: 10px;
+}
+
+.inputs_wrapper {
+  width: 45%;
+}
+
+.order_list_wrapper {
+  height: 320px;
+  width: 55%;
+  overflow: auto;
+}
+
+.order_list {
+  padding-top: 22px;
+  padding-right: 10px;
+}
+
+.btn {
+  padding: 8px 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5cd3a8;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #373737;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: 7px 4px 14px rgba(0, 0, 0, 0.11);
+}
+
+.totalCost_wrapper {
+  display: flex;
+  align-items: baseline;
+  column-gap: 50px;
+}
+
+.cost {
+  margin-left: 10px;
+  font-size: 20px;
 }

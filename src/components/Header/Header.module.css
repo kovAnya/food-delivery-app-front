@@ -22,7 +22,7 @@
   color: #5cd3a8;
 }
 
-.link::after {
+.link:not(:last-child)::after {
   content: "";
   margin-left: 50px;
   border: 1px solid #666;

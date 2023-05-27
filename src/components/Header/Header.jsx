@@ -12,7 +12,7 @@ export const Header = () => {
           Cart
         </NavLink>
         <NavLink to="/orders" className={css.link}>
-          Orders
+          My orders
         </NavLink>
       </nav>
     </header>

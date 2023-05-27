@@ -1,0 +1,28 @@
+.form {
+  padding: 40px;
+  width: 400px;
+  background: #eee;
+  box-shadow: 7px 4px 14px rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+}
+
+.field {
+  display: block;
+  padding: 10px;
+  margin-bottom: 12px;
+  background: white;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.field:hover,
+.field:focus {
+  border: 1px solid #5cd3a8;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+}

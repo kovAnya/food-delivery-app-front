@@ -1,10 +1,35 @@
 import css from "./ProductCard.module.css";
-import { addToStorage } from "../../services/localStorage";
+import {
+  addToStorage,
+  getCart,
+  deleteFromStorage,
+} from "../../services/localStorage";
+import { useState, useEffect } from "react";
 
 export const ProductCard = ({ product }) => {
+  const [inCart, setInCart] = useState(false);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const data = await getCart();
+      const found = await data.find((item) => item._id === product._id);
+      if (found && found.length > 0) {
+        setInCart(true);
+      } else setInCart(false);
+    };
+    getProducts();
+  }, []);
+
   const onClick = () => {
     addToStorage(product);
+    setInCart(!inCart);
   };
+
+  const onRemoveClick = () => {
+    deleteFromStorage(product._id);
+    setInCart(!inCart);
+  };
+
   return (
     <li className={css.product_card}>
       <img
@@ -18,9 +43,20 @@ export const ProductCard = ({ product }) => {
       <p>
         Price: <span>{product.price}$</span>
       </p>
-      <button className={css.product_btn} type="button" onClick={onClick}>
-        add to Cart
-      </button>
+      {!inCart && (
+        <button className={css.product_btn} type="button" onClick={onClick}>
+          add to Cart
+        </button>
+      )}
+      {inCart && (
+        <button
+          className={`${css.product_btn} ${css.product_btn_rmv}`}
+          type="button"
+          onClick={onRemoveClick}
+        >
+          remove from Cart
+        </button>
+      )}
     </li>
   );
 };

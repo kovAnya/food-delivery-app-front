@@ -1,4 +1,8 @@
 .product_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
   width: 280px;
   background-color: #eee;
@@ -7,11 +11,13 @@
 
 .product_img {
   width: 240px;
+  margin-bottom: 15px;
 }
 
 .product_name {
   font-size: 16px;
   font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .product_descr {
@@ -19,5 +25,23 @@
 }
 
 .product_btn {
-  color: green;
+  padding: 8px 30px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: honeydew;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #373737;
+}
+
+.product_btn:hover,
+.product_btn:focus {
+  box-shadow: 7px 4px 14px rgba(0, 0, 0, 0.11);
+  background-color: #5cd3a8;
+}
+
+.product_btn_rmv {
+  color: crimson;
 }

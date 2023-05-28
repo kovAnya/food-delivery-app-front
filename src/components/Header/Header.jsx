@@ -9,7 +9,7 @@ export const Header = () => {
           Home
         </NavLink>
         <NavLink to="/cart" className={css.link}>
-          Cart
+          Shopping Cart
         </NavLink>
         <NavLink to="/orders" className={css.link}>
           My orders

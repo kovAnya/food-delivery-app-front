@@ -33,6 +33,7 @@
 .error {
   color: red;
   font-size: 10px;
+  margin-top: -12px;
 }
 
 .inputs_wrapper {
@@ -75,4 +76,10 @@
 .cost {
   margin-left: 10px;
   font-size: 20px;
+}
+
+.oops_msg {
+  padding: 40px 40px;
+  color: red;
+  text-align: center;
 }

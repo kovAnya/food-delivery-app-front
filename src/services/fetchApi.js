@@ -11,6 +11,13 @@ export const getProductsByStore = async (store) => {
   }
 };
 
-export const addNewOrder = async () => {};
+export const addNewOrder = async (order) => {
+  try {
+    const data = await axios.post(`/orders`, order);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const findOrder = async () => {};

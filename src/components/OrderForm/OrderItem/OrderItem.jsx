@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import css from "./OrderItem.module.css";
 
 export const OrderItem = ({ product, onCountChange, onRemoveBtnClick }) => {
-  const [itemCount, setItemCount] = useState(product.count);
+  const [itemCount, setItemCount] = useState(product.quantity);
   const onChange = (e) => {
     setItemCount(e.target.value);
     onCountChange(e);

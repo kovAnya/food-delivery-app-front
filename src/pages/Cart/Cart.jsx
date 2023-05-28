@@ -21,7 +21,7 @@ const Cart = () => {
 
   useEffect(() => {
     const cost = products.reduce((acc, product) => {
-      return acc + product.price * product.count;
+      return acc + product.price * product.quantity;
     }, 0);
     setTotalCost(cost);
   }, [products]);

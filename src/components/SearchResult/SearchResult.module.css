@@ -1,0 +1,45 @@
+.order_list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 80vw;
+}
+
+.order {
+  padding: 25px;
+  border: 1px solid honeydew;
+  background-color: honeydew;
+  border-radius: 10px;
+}
+
+.order_data {
+  padding-left: 14px;
+  font-weight: 600;
+  font-style: 18px;
+  color: #373737;
+  line-height: 1.5em;
+}
+
+.order_products {
+  margin-top: 30px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.order_item {
+  margin: 5px;
+  border: 1px solid #373737;
+  display: flex;
+  gap: 30px;
+  padding: 10px 20px;
+  color: #373737;
+}
+
+.item_title {
+  text-transform: uppercase;
+  font-weight: 600;
+}

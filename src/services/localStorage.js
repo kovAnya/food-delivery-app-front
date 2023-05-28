@@ -1,5 +1,5 @@
 export const addToStorage = (product) => {
-  product.count = 1;
+  product.quantity = 1;
   const productsInCart = JSON.parse(localStorage.getItem("cart")) || [];
   productsInCart.push(product);
   localStorage.setItem("cart", JSON.stringify(productsInCart));
@@ -9,7 +9,7 @@ export const updateCount = (count, id) => {
   const productsInCart = JSON.parse(localStorage.getItem("cart"));
   const updatedProducts = productsInCart.map((product) => {
     if (product._id === id) {
-      product.count = count;
+      product.quantity = count;
     }
     return product;
   });

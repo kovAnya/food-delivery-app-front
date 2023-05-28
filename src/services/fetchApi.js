@@ -20,4 +20,13 @@ export const addNewOrder = async (order) => {
   }
 };
 
-export const findOrder = async () => {};
+export const findOrder = async ({ email, phone }) => {
+  try {
+    const data = await axios.get(
+      `/orders/user?email=${email}&phone=${phone.replace("+", "")}`
+    );
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};

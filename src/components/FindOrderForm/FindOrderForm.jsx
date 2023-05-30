@@ -2,6 +2,7 @@ import * as Yup from "yup";
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import { findOrder } from "../../services/fetchApi";
 import css from "./FindOrderForm.module.css";
+import Notiflix from "notiflix";
 
 const validationSchema = Yup.object({
   email: Yup.string().required("Email is required"),
@@ -20,6 +21,9 @@ export const FindOrderForm = ({ onSubmit }) => {
         phone: "",
       },
     });
+    if (result.data.length === 0) {
+      Notiflix.Notify.failure("No orders have been placed on your email yet");
+    }
     onSubmit(result.data);
   };
   return (

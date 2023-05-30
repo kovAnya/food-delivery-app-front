@@ -6,6 +6,7 @@ import {
   updateCount,
   deleteFromStorage,
 } from "../../services/localStorage";
+import Notiflix from "notiflix";
 
 const Cart = () => {
   const [products, setProducts] = useState([]);
@@ -14,6 +15,11 @@ const Cart = () => {
   useEffect(() => {
     const getProducts = async () => {
       const data = await getCart();
+      if (data.length === 0) {
+        Notiflix.Notify.warning(
+          "There are no products in your shopping cart yet"
+        );
+      }
       setProducts(data);
     };
     getProducts();

@@ -5,6 +5,7 @@ import {
   deleteFromStorage,
 } from "../../services/localStorage";
 import { useState, useEffect } from "react";
+import Notiflix from "notiflix";
 
 export const ProductCard = ({ product }) => {
   const [inCart, setInCart] = useState(false);
@@ -23,6 +24,7 @@ export const ProductCard = ({ product }) => {
   const onClick = () => {
     addToStorage(product);
     setInCart(!inCart);
+    Notiflix.Notify.success("Products was added to your shopping cart");
   };
 
   const onRemoveClick = () => {

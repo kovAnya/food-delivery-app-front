@@ -14,6 +14,7 @@ You can also check out the backend repository https://github.com/kovAnya/food-de
 - Axios
 - Formic
 - yup
+- Notiflix
 
 This is an application for Food delivery service, which will help you to buy products in food online stores. You can choose the products you need and put them in the shopping cart. Once the Product has been placed in the cart, the 'buy button' will change to the 'remove button'. You can change the quantity of the products on the cart page. Also, you can remove products from the cart.
 

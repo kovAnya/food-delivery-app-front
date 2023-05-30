@@ -1,3 +1,5 @@
+import Notiflix from "notiflix";
+
 export const addToStorage = (product) => {
   product.quantity = 1;
   const productsInCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -23,6 +25,7 @@ export const deleteFromStorage = (id) => {
     (product) => product._id !== id
   );
   localStorage.setItem("cart", JSON.stringify(filteredProducts));
+  Notiflix.Notify.success("Product has been removed!");
 };
 
 export const clearStorage = () => {
@@ -32,4 +35,13 @@ export const clearStorage = () => {
 export const getCart = () => {
   const productsInCart = JSON.parse(localStorage.getItem("cart")) || [];
   return productsInCart;
+};
+
+export const checkStore = (store) => {
+  const productsInCart = JSON.parse(localStorage.getItem("cart")) || [];
+  if (productsInCart.length === 0) {
+    return true;
+  }
+  const result = productsInCart.some((product) => product.store === store);
+  return result;
 };

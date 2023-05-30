@@ -1,4 +1,11 @@
 .sidebar {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+    width: 100%;
+  }
   width: 200px;
   padding: 0 20px;
 }
@@ -8,15 +15,22 @@
 }
 
 .sidebar_btn {
-  padding: 20px;
-  margin-bottom: 5px;
-  width: 100%;
-  border: none;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
   text-transform: uppercase;
   color: #373737;
+  border: none;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  @media screen and (min-width: 768px) {
+    padding: 20px;
+    margin-bottom: 5px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .sidebar_btn:hover,

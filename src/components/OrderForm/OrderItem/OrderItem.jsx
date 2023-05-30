@@ -21,6 +21,7 @@ export const OrderItem = ({ product, onCountChange, onRemoveBtnClick }) => {
           Price: <span>{product.price}$</span>
         </p>
         <input
+          className={css.order_list_field}
           id={product._id}
           type="number"
           name="count"

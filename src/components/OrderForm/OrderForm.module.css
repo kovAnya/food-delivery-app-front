@@ -1,28 +1,40 @@
 .form {
-  padding: 40px;
-  width: 60%;
-  height: 410px;
   background: #eee;
   box-shadow: 7px 4px 14px rgba(0, 0, 0, 0.11);
   border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+    width: 60%;
+  }
+  @media screen and (min-width: 1024px) {
+    height: 410px;
+  }
 }
 
 .form_wrapper {
-  display: flex;
-  column-gap: 30px;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    column-gap: 30px;
+  }
 }
 
 .field {
   display: block;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 16px;
   background: white;
   border: 1px solid #888;
   border-radius: 10px;
-  width: 100%;
-  font-size: 16px;
   outline: none;
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  font-size: 16px;
+
+  @media screen and (min-width: 767px) {
+    padding: 10px;
+  }
 }
 
 .field:hover,
@@ -37,13 +49,17 @@
 }
 
 .inputs_wrapper {
-  width: 45%;
+  @media screen and (min-width: 1024px) {
+    width: 45%;
+  }
 }
 
 .order_list_wrapper {
-  height: 330px;
-  width: 55%;
-  overflow: auto;
+  @media screen and (min-width: 1024px) {
+    height: 330px;
+    width: 55%;
+    overflow: auto;
+  }
 }
 
 .order_list {
@@ -70,8 +86,14 @@
 
 .totalCost_wrapper {
   display: flex;
-  align-items: baseline;
-  column-gap: 50px;
+  flex-direction: column;
+  gap: 10px;
+
+  @media screen and (min-width: 767px) {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 50px;
+  }
 }
 
 .cost {

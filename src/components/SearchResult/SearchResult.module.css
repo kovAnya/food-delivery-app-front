@@ -7,10 +7,13 @@
 }
 
 .order {
-  padding: 25px;
+  padding: 10px;
   border: 1px solid honeydew;
   background-color: honeydew;
   border-radius: 10px;
+  @media screen and (min-width: 768px) {
+    padding: 25px;
+  }
 }
 
 .order_data {
@@ -26,8 +29,11 @@
 }
 
 .title {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 12px;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    font-weight: 600;
+  }
 }
 
 .order_item {
@@ -40,6 +46,7 @@
 }
 
 .item_title {
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: 600;
 }
